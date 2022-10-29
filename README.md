@@ -1,2 +1,0 @@
-# countyourpennies
-Project 3
