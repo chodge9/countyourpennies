@@ -14,23 +14,23 @@ const userSchema = new Schema({
         unique: true,
         match: [/.+@.+\..+/, 'Must match an email address!'],
     },
-    thoughts:[{
+    password: {
+        type: String,
+        required: true,
+        minlength: 8
+      },
+   savedGoals:[{
         type: Schema.Types.ObjectId,
-        ref: "Thought",
+        ref: "Goal",
     }],
-   friends:[{
-        type: Schema.Types.ObjectId,
-        ref: "User",
-    }],
+    
 },
 {
     toJSON:{
         virtuals:true
     }
 })
-userSchema.virtual("friendCount").get(function(){
-    return this.friends.length
-})
+
 const User = model("User", userSchema)
 
 module.exports = User
