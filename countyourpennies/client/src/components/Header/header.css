@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Maven+Pro&display=swap');
+
+
+
+.header {
+    overflow: hidden;
+    background-color: #b5aeae;
+    padding: 20px 10px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: center;
+    position: relative;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+  }
+  
+
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+  
