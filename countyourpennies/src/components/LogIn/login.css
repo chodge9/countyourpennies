@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Maven+Pro&display=swap');
+
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+  }
+  
+  .insideContainer {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .insideContent {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .LogIn {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+  }
+
+.Submit {
+    padding: 15px;
+    text-align: center;
+}
+
+.form {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
