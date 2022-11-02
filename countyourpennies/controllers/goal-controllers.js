@@ -1,8 +1,8 @@
 const { User, Thought } = require("../models")
 
 
-const userController = {
-    getAllusers(request,response) {
+const goalController = {
+    getAllgoals(request,response) {
         User.find().then((res)=> {
             console.log(res, "This is the response. UCln7")
             response.json(res)
@@ -12,42 +12,42 @@ const userController = {
         })
     },
 
-    createUsers(request,response) {
-        console.log(request, "This is the Request UCln16")
+    createGoals(request,response) {
+        console.log(request, "This is the Request GCln16")
         User.create(request.body).then((res)=> {
             response.json(res)
         }).catch((err)=> {
-            console.log(err, "this is the error on UCln20")
+            console.log(err, "this is the error on GCln20")
             response.status(500).json(err)
         })
     },
 
-    deleteUsers(request,response) {
+    deleteGoals(request,response) {
         console.log(response, "This is Deleting Stuff!")
         User.findOneAndRemove(request.body).then((res)=> {
             response.json(res)
         }).catch((err)=> {
-        console.log(err, "this is the error on UCln30")
+        console.log(err, "this is the error on GCln30")
         response.status(500).json(err)
         })
     },
 
-    getUsersbyId(request,response) {
+    getGoalsbyId(request,response) {
         console.log(res, "This is Updating Stuff!")
         User.findById(request.body).then((res)=> {
             response.json(res)
         }).catch((err)=> {
-        console.log(err, "this is the error on UCln30")
+        console.log(err, "this is the error on GCln30")
         response.status(500).json(err)
         })
     },
 
-    updateUsers(request,response) {
+    updateGoals(request,response) {
         console.log(res, "This is Updating Stuff!")
         User.findOneAndUpdate(request.body).then((res)=> {
             response.json(res)
         }).catch((err)=> {
-        console.log(err, "this is the error on UCln30")
+        console.log(err, "this is the error on GCln30")
         response.status(500).json(err)
         })
     },
@@ -55,4 +55,4 @@ const userController = {
 
 }
 
-module.exports = userController
+module.exports = goalController
