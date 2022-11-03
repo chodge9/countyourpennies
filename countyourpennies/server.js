@@ -4,20 +4,15 @@ const mongoose = require("mongoose");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
-const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 const server = new ApolloServer({
   typeDefs, 
   resolvers
 });
 
-const startApolloServer = async (typeDefs, resolvers) => {
-  await server.start();
-  server.applyMiddleware({app});
-};
 
 dotenv.config();
 
