@@ -1,0 +1,18 @@
+:root {
+  --color-bg:#96BBBB ;
+  --color-bg-variant: #618985;
+  --color-primary:#C19875;
+  --color-text: #414535;
+  --color-light: #e2ded3;
+  
+  --transition: all 400ms ease;;
+  
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
