@@ -17,5 +17,4 @@ router.route("/updateGoals").patch(updateGoals)
 
 router.route("/deleteGoals").delete(deleteGoals)
 
-
 module.exports = router 

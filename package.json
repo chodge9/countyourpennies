@@ -1,7 +1,8 @@
 {
-  "name": "count-your-pennies",
-  "version": "1.0.0",
+  "name": "countyourpennies",
+  "version": "0.1.0",
   "description": "",
+<<<<<<< HEAD
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -21,10 +22,51 @@
     "url": "https://github.com/chodge9/countyourpennies/issues"
   },
   "homepage": "https://github.com/chodge9/countyourpennies#readme",
+=======
+  "main": "server.js",
+  "private": true,
+>>>>>>> 5ace68cb31ce96b63bbcff999e1a35b8276632f4
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "add": "^2.0.6",
+    "apollo-server-express": "^3.10.4",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-graphql": "^0.12.0",
     "graphql": "^16.6.0",
-    "nodemon": "^2.0.20"
+    "helmet": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.0",
+    "morgan": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node server.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
-}
+  }
