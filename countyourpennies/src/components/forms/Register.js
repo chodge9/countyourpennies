@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import fire from '../config/Fire'
 import './login.css'
 
-class Register extends React.Component {
+class Register extends Component {
     state = {
         email: '',
         password: '',

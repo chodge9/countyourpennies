@@ -2,11 +2,19 @@ import React, { Component } from 'react'
 import fire from '../config/Fire'
 import './login.css'
 
-class Login extends React.Component {
+class Login extends Component {
     state = {
         email: '',
         password: '',
         fireErrors: ''
+    }
+
+    login = e => {
+        e.preventDefault();
+        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+        .catch((error) => {
+            this.setState({fireErrors: error.message})
+        });
     }
 
     handleChange = e => {
