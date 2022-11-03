@@ -6,7 +6,7 @@ import Register from './forms/Register'
 import Tracker from './Tracker/Tracker';
 
 
-export default class Main extends React.Component {
+export default class Main extends Component {
 
     state = {
         user: 1,
@@ -14,26 +14,26 @@ export default class Main extends React.Component {
         formSwitcher: false
     }
 
-    // componentDidMount(){
-    //     this.authListener();
-    // }
+    componentDidMount(){
+        this.authListener();
+    }
 
-    // authListener(){
-    //     fire.auth().onAuthStateChanged((user) => {
-    //         if(user) {
-    //             this.setState({user});
-    //         }else{
-    //             this.setState({user:null})
-    //         }
-    //     })
-    // }
+    authListener(){
+        fire.auth().onAuthStateChanged((user) => {
+            if(user) {
+                this.setState({user});
+            }else{
+                this.setState({user:null})
+            }
+        })
+    }
 
-    // formSwitcher = (action) => {
-    //     console.log(action);
-    //     this.setState({
-    //         formSwitcher: action === 'register' ? true : false
-    //     });
-    // }
+    formSwitcher = (action) => {
+        console.log(action);
+        this.setState({
+            formSwitcher: action === 'register' ? true : false
+        });
+    }
 
 
     render(){
